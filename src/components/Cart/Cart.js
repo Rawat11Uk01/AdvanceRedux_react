@@ -12,7 +12,9 @@ const Cart = (props) => {
         {cartItems.map((data) => {
           return (
             <CartItem
+            key={data.id}
               item={{
+                id : data.id,
                 title: data.name,
                 quantity: data.quantity,
                 total: data.totalPrice,
